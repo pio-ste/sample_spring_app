@@ -5,7 +5,7 @@ create table teacher (
     first_name varchar(255) NOT NULL check ( char_length(first_name) >= 2 and char_length(first_name) <= 40),
     last_name varchar(255) NOT NULL check ( char_length(last_name) >= 2 and char_length(last_name) <= 40),
     school_subject varchar(255) NOT NULL check ( char_length(school_subject) >= 2 and char_length(school_subject) <= 40),
-    CONSTRAINT student_pkey PRIMARY KEY (id)
+    CONSTRAINT teacher_pkey PRIMARY KEY (id)
 );
 
 create table student (
@@ -15,7 +15,7 @@ create table student (
     field_of_study varchar(255) NOT NULL check ( char_length(field_of_study) >= 2 and char_length(field_of_study) <= 40),
     first_name varchar(255) NOT NULL check ( char_length(first_name) >= 2 and char_length(first_name) <= 40),
     last_name varchar(255) NOT NULL check ( char_length(last_name) >= 2 and char_length(last_name) <= 40),
-    PRIMARY KEY (id)
+    CONSTRAINT student_pkey PRIMARY KEY (id)
 );
 
 create table teachers_students (
